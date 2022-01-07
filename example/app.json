@@ -1,0 +1,22 @@
+{
+  "name": "react-native-media-player-example",
+  "displayName": "MediaPlayer Example",
+  "expo": {
+    "name": "react-native-media-player-example",
+    "slug": "react-native-media-player-example",
+    "description": "Example app for react-native-media-player",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
