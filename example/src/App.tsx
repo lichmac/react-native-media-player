@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-media-player';
+import { StyleSheet, View } from 'react-native';
+import {MediaPlayer} from '../../src/MediaPlayer';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <MediaPlayer
+        style={styles.box}
+        playerStyle={styles.box}
+        type={'video'}
+        source={{
+          uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+        }}/>
     </View>
   );
 }
@@ -24,8 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    width: 300,
+    height: 300,
   },
 });

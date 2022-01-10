@@ -1,3 +1,5 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import { MediaPlayer } from './MediaPlayer';
+
+module.exports = {
+  MediaPlayer
+};
